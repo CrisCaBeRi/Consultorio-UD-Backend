@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  background-color: lightblue;
+  gap: 20%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header>picture {
+  width: 20%;
+  position: fixed;
+  right: 5px;
+}
+header>picture>img{
+  width: 40px;
+  height: 40px;
+}
+#back{
+  transition: 0.5s all;
+
+}
+#back:hover{
+  transform: scale(1.3);  
+}
+header > h1 {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+main {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-around;
+}
+main > article {
+  padding: 40px 0;
+  border: 5px solid lightblue;
+  width: 20vw;
+  border-radius: 15px;
+  transition: 0.5s all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+article:hover {
+  transform: scale(1.1);
+}
+picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+picture > img {
+  width: 80%;
+  height: 90%;
+}
+article > h2 {
+  color: rgb(4, 60, 78);
+  font-size: 30px;
+}
+article > p {
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+  color: grey;
+}

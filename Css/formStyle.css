@@ -1,0 +1,76 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 50px auto;
+  gap: 10px;
+  border: 10px solid lightblue;
+  border-radius: 15px;
+  box-shadow: 4px 3px 20px -3px rgba(130, 130, 130, 1);
+}
+
+form > h2 {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  color: white;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form > input,
+form > select {
+  border-radius: 1rem;
+  border: 2px solid lightblue;
+  padding-left: 1rem;
+  width: 80%;
+  height: 2rem;
+  margin: 0.5rem auto;
+}
+form > label {
+  margin-left: 2rem;
+  color: grey;
+  margin-bottom: -1rem;
+}
+select > option {
+  color: gray;
+}
+.butons-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+.butons-form > input {
+  width: 90%;
+  height: 2rem;
+  margin: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.butons-form > #send {
+  background-color: rgb(5, 168, 223);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#send:hover {
+    background-color: rgb(5, 96, 126);
+    transform: scale(1.05);
+}
+
+.butons-form > #reset {
+    border:1.5px solid lightblue;
+    background-color: transparent;
+    color: gray;
+}
+#reset:hover {
+    border:1.5px solid black;
+    color: black;
+    transform: scale(1.05);
+}
+
