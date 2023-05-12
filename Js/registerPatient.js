@@ -10,11 +10,9 @@ formPatient.addEventListener("submit", (event) => {
     patientPhone: document.getElementById("phone").value,
     patientSpeciality: document.getElementById("speciality").value,
   };
-
   const patientCookie = getCookie("patients")
     ? JSON.parse(getCookie("patients"))
     : [];
-
   //?Validar si existe una propiedad con la misma especialidad
   const idExist = patientCookie.some(
     (pat) => pat.patientId === patientData.patientId
@@ -33,7 +31,6 @@ formPatient.addEventListener("submit", (event) => {
     formDoctor.reset();
   }
 });
-
 //! Guardar el objeto creado dentro de la cookie
 function saveOnCookie(patData) {
   //recibe el objeto creado del formulario
@@ -48,12 +45,10 @@ function saveOnCookie(patData) {
   const newJSON = JSON.stringify(patients);
   setCookie("patients", newJSON);
 }
-
 //! Función para guardar datos en la cookie
 function setCookie(name, value) {
   document.cookie = `${name}=${encodeURIComponent(value)}`;
 }
-
 //!Funcion para traer la cookie
 function getCookie(nameCookie) {
   const cookies = document.cookie.split("; ");

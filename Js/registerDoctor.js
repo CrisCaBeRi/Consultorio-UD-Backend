@@ -4,11 +4,11 @@ formDoctor.addEventListener("submit", (event) => {
   event.preventDefault();
   const dataDoctor = {
     nameDoctor: document.getElementById("name").value,
-    lastnameDoctor: document.getElementById("lastName").value,
+    lastNameDoctor: document.getElementById("lastName").value,
     idDoctor: document.getElementById("id").value,
     officeDoctor: document.getElementById("office").value,
     mailDoctor: document.getElementById("mail").value,
-    specialtyDoctor: document.getElementById("specialty").value,
+    specialityDoctor: document.getElementById("specialty").value,
   };
   //?Validar si existe una cookie llamada medicos, si no, retorna un array vacío
   const doctorCookie = getCookie("doctors")
@@ -16,14 +16,14 @@ formDoctor.addEventListener("submit", (event) => {
     : [];
   //?Validar si existe una propiedad con la misma especialidad
   const specialityExist = doctorCookie.some(
-    (med) => med.specialtyDoctor === dataDoctor.specialtyDoctor
+    (med) => med.specialtyDoctor === dataDoctor.specialityDoctor
   );
   const idExist = doctorCookie.some(
     (med) => med.idDoctor === dataDoctor.idDoctor
   );
   if (specialityExist) {
     alert(
-      `Ya existe un médico con la especialidad de ${dataDoctor.specialtyDoctor}`
+      `Ya existe un médico con la especialidad de ${dataDoctor.specialityDoctor}`
     );
   } else if (idExist){
     alert(
